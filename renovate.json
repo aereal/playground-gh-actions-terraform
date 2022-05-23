@@ -1,0 +1,29 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "local>aereal/renovate-config"
+  ],
+  "packageRules": [
+    {
+      "matchManagers": [
+        "terraform"
+      ],
+      "matchDepTypes": [
+        "required_version"
+      ],
+      "enabled": false
+    }
+  ],
+  "regexManagers": [
+    {
+      "fileMatch": [
+        "\\.tf$"
+      ],
+      "matchStrings": [
+        "required_version\\s*=\\s*\"(?<currentValue>.*?)\"\\s*\n"
+      ],
+      "depNameTemplate": "hashicorp/terraform",
+      "datasourceTemplate": "github-releases"
+    }
+  ]
+}
