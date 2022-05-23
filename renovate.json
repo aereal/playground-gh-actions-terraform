@@ -24,6 +24,13 @@
       ],
       "depNameTemplate": "hashicorp/terraform",
       "datasourceTemplate": "github-releases"
+    },
+    {
+      "fileMatch": ["^\\.github/.*\\.ya?ml$"],
+      "matchStrings": [
+        "datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s*?_version=(?<currentValue>.*)"
+      ],
+      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
     }
   ]
 }
