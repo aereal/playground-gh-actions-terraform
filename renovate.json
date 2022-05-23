@@ -20,7 +20,7 @@
         "\\.tf$"
       ],
       "matchStrings": [
-        "required_version\\s*=\\s*\"(?<currentValue>.*?)\"\\s*\n"
+        "required_version\\s*=\\s*\"v(?<currentValue>.*?)\"\\s*\n"
       ],
       "depNameTemplate": "hashicorp/terraform",
       "datasourceTemplate": "github-releases"
@@ -30,7 +30,7 @@
         "^\\.github/.*\\.ya?ml$"
       ],
       "matchStrings": [
-        "terraform_version\\s*:\\s*.*?(?<currentValue>[0-9.]+).*?\n"
+        "terraform_version\\s*:\\s*['\"](?<currentValue>[0-9.]+)['\"]\n"
       ],
       "depNameTemplate": "hashicorp/terraform",
       "datasourceTemplate": "github-releases"
