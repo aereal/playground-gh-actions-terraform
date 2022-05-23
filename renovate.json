@@ -17,16 +17,6 @@
   "regexManagers": [
     {
       "fileMatch": [
-        "\\.tf$"
-      ],
-      "matchStrings": [
-        "required_version\\s*=\\s*\"v(?<currentValue>.*?)\"\\s*\n"
-      ],
-      "depNameTemplate": "hashicorp/terraform",
-      "datasourceTemplate": "github-releases"
-    },
-    {
-      "fileMatch": [
         "^\\.github/.*\\.ya?ml$"
       ],
       "matchStrings": [
