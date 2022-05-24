@@ -22,6 +22,7 @@
       "matchStrings": [
         "terraform_version\\s*:\\s*['\"](?<currentValue>[0-9.]+)['\"]\n"
       ],
+      "currentValueTemplate": "v{{{currentValue}}}",
       "depNameTemplate": "hashicorp/terraform",
       "datasourceTemplate": "github-releases"
     }
