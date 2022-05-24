@@ -20,7 +20,7 @@
         "atlantis[.]ya?ml$"
       ],
       "matchStrings": [
-        "terraform_version\\s*:\\s*v(?<currentValue>.*)\n"
+        "terraform_version\\s*:\\s*'v(?<currentValue>.*)'\n"
       ],
       "currentValueTemplate": "v{{{currentValue}}}",
       "depNameTemplate": "hashicorp/terraform",
