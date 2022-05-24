@@ -3,17 +3,6 @@
   "extends": [
     "local>aereal/renovate-config"
   ],
-  "packageRules": [
-    {
-      "matchManagers": [
-        "terraform"
-      ],
-      "matchDepTypes": [
-        "required_version"
-      ],
-      "enabled": false
-    }
-  ],
   "regexManagers": [
     {
       "fileMatch": [
@@ -23,6 +12,16 @@
         "terraform_version\\s*:\\s*['\"](?<currentValue>[0-9.]+)['\"]\n"
       ],
       "currentValueTemplate": "v{{{currentValue}}}",
+      "depNameTemplate": "hashicorp/terraform",
+      "datasourceTemplate": "github-releases"
+    },
+    {
+      "fileMatch": [
+        "atlantis[.]ya?ml$"
+      ],
+      "matchStrings": [
+        "terraform_version\\s*:\\s*v(?<currentValue>.*)\n"
+      ],
       "depNameTemplate": "hashicorp/terraform",
       "datasourceTemplate": "github-releases"
     }
